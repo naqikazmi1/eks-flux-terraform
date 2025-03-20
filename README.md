@@ -6,25 +6,25 @@ This project automates the deployment of an Amazon EKS cluster, an ECR repositor
 
 ## Architecture
 
-    Amazon EKS: Managed Kubernetes cluster for running containerized workloads.
+    * Amazon EKS: Managed Kubernetes cluster for running containerized workloads.
 
-    Amazon ECR: Private container registry to store and manage Docker images.
+    * Amazon ECR: Private container registry to store and manage Docker images.
 
-    Flux: GitOps tool for continuous deployment on Kubernetes.
+    * Flux: GitOps tool for continuous deployment on Kubernetes.
 
-    Terraform: Infrastructure as Code (IaC) tool to automate resource provisioning.
+    * Terraform: Infrastructure as Code (IaC) tool to automate resource provisioning.
 
 ## Prerequisites
 
 ## Ensure you have the following installed:
 
-    Terraform
+    * Terraform
 
-    AWS CLI
+    * AWS CLI
 
-    kubectl
+    * kubectl
 
-    Flux CLI
+    * Flux CLI
 
 AWS credentials configured via aws configure or environment variables.
 
