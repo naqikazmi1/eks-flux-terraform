@@ -36,6 +36,8 @@ AWS credentials configured via aws configure or environment variables.
 
 3. Review and Apply Terraform Configuration
 
+4. Verify Deployment
+
 ## This will create:
 
 * An ECR repository
@@ -43,8 +45,6 @@ AWS credentials configured via aws configure or environment variables.
 * An EKS cluster
 
 * Bootstrap Flux
-
-4. Verify Deployment
 
 ## Check if Flux components are running and workloads are being deployed:
     flux get all
