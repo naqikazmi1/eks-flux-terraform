@@ -1,10 +1,10 @@
-EKS, ECR, and Flux Deployment with Terraform
+## EKS, ECR, and Flux Deployment with Terraform
 
-Overview
+## Overview
 
 This project automates the deployment of an Amazon EKS cluster, an ECR repository, and Flux for GitOps-driven Kubernetes management using Terraform. It ensures a fully integrated cloud-native setup for deploying and managing applications on AWS.
 
-Architecture
+## Architecture
 
     Amazon EKS: Managed Kubernetes cluster for running containerized workloads.
 
@@ -14,9 +14,9 @@ Architecture
 
     Terraform: Infrastructure as Code (IaC) tool to automate resource provisioning.
 
-Prerequisites
+## Prerequisites
 
-Ensure you have the following installed:
+## Ensure you have the following installed:
 
     Terraform
 
@@ -28,7 +28,7 @@ Ensure you have the following installed:
 
 AWS credentials configured via aws configure or environment variables.
 
-Deployment Steps
+## Deployment Steps
 
 1. Clone the Repository
 
@@ -36,36 +36,28 @@ Deployment Steps
 
 3. Review and Apply Terraform Configuration
 
-This will create:
+## This will create:
 
-An EKS cluster
+    An ECR repository
 
-An ECR repository
+    An EKS cluster
 
-Flux installation on EKS
+    Bootstrap Flux
 
-4. Configure kubectl
+4. Verify Deployment
 
-5. Bootstrap Flux
+## Check if Flux components are running and workloads are being deployed:
+    flux get all
 
-This command configures Flux to sync your Kubernetes cluster with the Git repository.
+Check if workloads are being deployed
 
-6. Verify Deployment
+## Cleanup
 
-Check if Flux components are running:
-
-Check if workloads are being deployed:
-
-Cleanup
-
-To remove all deployed resources, run:
-
-Additional Notes
+## Additional Notes
 
 Adjust variables in terraform.tfvars to customize the setup.
 
 Modify flux-system manifests for workload configurations.
 
-Monitor logs using: 
+## Monitor logs using: 
     kubectl logs -n flux-system -l app.kubernetes.io/name=source-controller
-
